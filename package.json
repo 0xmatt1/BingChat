@@ -1,17 +1,17 @@
 {
   "name": "bingchat",
   "type": "module",
-  "version": "0.0.12",
+  "version": "0.0.1",
   "packageManager": "pnpm@7.27.0",
   "description": "",
-  "author": "KeJun",
+  "author": "VincentHou",
   "license": "MIT",
   "homepage": "https://github.com/kejunmao/edgegpt#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kejunmao/edgegpt.git"
+    "url": "git+https://github.com/vincenthou/BingChat.git"
   },
-  "bugs": "https://github.com/kejunmao/edgegpt/issues",
+  "bugs": "https://github.com/vincenthou/BingChat/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
