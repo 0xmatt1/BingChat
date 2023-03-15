@@ -3,7 +3,7 @@ import { WebSocket } from "ws";
 import { DELIMITER } from "./constant";
 import { createRequest } from "./request";
 import { Conversation, EdgeGPTResponse, RequestOptions } from "./types";
-import { appendIdentifier, createHeaders } from "./utils";
+import { appendIdentifier, createWSHeaders } from "./utils";
 import TypedEmitter from "typed-emitter";
 
 type ChatHubEvents = {
@@ -45,7 +45,7 @@ export class ChatHub extends (EventEmitter as new () => TypedEmitter<ChatHubEven
   protected createWs() {
     return new Promise<WebSocket>((resolve) => {
       this.ws = new WebSocket("wss://sydney.bing.com/sydney/ChatHub", {
-        headers: this.conversation.headers ?? createHeaders(),
+        headers: this.conversation.headers ?? createWSHeaders(),
       });
       this.ws.on("open", () => {
         this.emit("open", this.ws);
@@ -60,11 +60,13 @@ export class ChatHub extends (EventEmitter as new () => TypedEmitter<ChatHubEven
           }
           const response = JSON.parse(obj) as EdgeGPTResponse;
           if (response["type"] === 1) {
-            const text: string =
-              response["arguments"][0]["messages"][0]["adaptiveCards"][0][
-                "body"
-              ][0]["text"];
-            this.emit("message", text);
+            if (response["arguments"][0]["messages"]) {
+              const text: string =
+                response["arguments"][0]["messages"][0]["adaptiveCards"][0][
+                  "body"
+                ][0]["text"];
+              this.emit("message", text);
+            }
             this.emit("response", response);
           } else if (response["type"] === 2) {
             this.emit("final", response);
