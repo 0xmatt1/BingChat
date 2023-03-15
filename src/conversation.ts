@@ -1,7 +1,6 @@
 import { Conversation, Cookie } from "./types";
 import { createHeaders, stringifyCookie } from "./utils";
-
-import https from "https";
+import fr from "follow-redirects";
 import crypto from "crypto";
 
 export const createConversation = async (
@@ -22,12 +21,13 @@ export const createConversation = async (
       ...defaultCiphers.slice(3),
     ].join(":");
 
-    https
+    fr.https
       .get(
         "https://edgeservices.bing.com/edgesvc/turing/conversation/create",
         {
           headers,
           ciphers: shuffledCiphers,
+          maxRedirects: 0,
         },
         (res) => {
           res.on("data", (chunk: Buffer) => {
