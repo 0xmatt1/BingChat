@@ -18,14 +18,14 @@ English | [简体中文](./README.zh-CN.md)
 ## Quick Start
 
 ```shell
-npx edgegpt
+npx bingchat
 ```
 
 ## CLI Usage
 
 ```shell
-npx edgegpt -h
-Usage: edgegpt [options]
+npx bingchat -h
+Usage: bingchat [options]
 
         !reset Reset the conversation
         !exit Exit the program
@@ -38,9 +38,9 @@ Options:
   -v, --version      Show version number                                                                    [boolean]
       --options      Request options  [array] [default: deepleo,enable_debug_commands,disable_emoji_spoken_text,enablemm]
 Examples:
-  edgegpt -f cookie.json
+  bingchat -f cookie.json
 
-Repo: https://github.com/kejunmao/edgegpt
+Repo: https://github.com/kejunmao/bingchat
 By: KeJun
 License: MIT
 ```
@@ -54,8 +54,8 @@ License: MIT
 ## Module Usage
 
 ```ts
-import { ChatBot, loadEdgeGPTConfig } from "edgegpt";
-const config = await loadEdgeGPTConfig();
+import { ChatBot, loadBingChatConfig } from "bingchat";
+const config = await loadBingChatConfig();
 
 const chatBot = new ChatBot(config);
 await chatBot.create();
@@ -65,7 +65,7 @@ console.log(await chatBot.askAsync("hello!"));
 
 ## Configuration
 
-Configuration is loaded by [unjs/c12](https://github.com/unjs/c12) from cwd. You can use either `edgegpt.config.json`, `edgegpt.config.{ts,js,mjs,cjs}`, `.edgegptrc`.
+Configuration is loaded by [unjs/c12](https://github.com/unjs/c12) from cwd. You can use either `bingchat.config.json`, `bingchat.config.{ts,js,mjs,cjs}`, `.BingChatrc`.
 
 See [./src/config.ts](./src/config.ts) for available options and defaults.
 
@@ -84,12 +84,12 @@ Published under [MIT License](./LICENSE).
 
 ## Acknowledgement and Thanks
 
-- [EdgeGPT](https://github.com/acheong08/EdgeGPT/)
-- [edgegpt](https://github.com/KeJunMao/edgegpt)
+- [bingchat](https://github.com/acheong08/bingchat/)
+- [bingchat](https://github.com/KeJunMao/bingchat)
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/edgegpt?style=flat-square
-[npm-version-href]: https://npmjs.com/package/edgegpt
+[npm-version-src]: https://img.shields.io/npm/v/bingchat?style=flat-square
+[npm-version-href]: https://npmjs.com/package/bingchat
 [bing-href]: https://www.bing.com/search?q=Bing+AI&showconv=1
 [node-href]: https://nodejs.org

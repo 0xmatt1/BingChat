@@ -1,9 +1,9 @@
 import { expect, test, describe } from "vitest";
 
-import { ChatBot, loadEdgeGPTConfig } from "../src";
+import { ChatBot, loadBingChatConfig } from "../src";
 
 describe("ChatBot", async () => {
-  const config = await loadEdgeGPTConfig();
+  const config = await loadBingChatConfig();
   const bot = new ChatBot(config);
   await bot.create();
 

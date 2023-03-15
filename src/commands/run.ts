@@ -1,5 +1,5 @@
-import { loadEdgeGPTConfig } from "../config";
-import { EdgeGPTConfig, EdgeGPTResponseThrottling } from "../types";
+import { loadBingChatConfig } from "../config";
+import { BingChatConfig, BingChatResponseThrottling } from "../types";
 import chalk from "chalk";
 import prompts, { Choice } from "prompts";
 import { ChatBot } from "../ChatBot";
@@ -9,7 +9,7 @@ import { marked } from "marked";
 // @ts-expect-error
 import TerminalRenderer from "marked-terminal";
 
-function createOrUpdateSpinnerPrefix(throttling?: EdgeGPTResponseThrottling) {
+function createOrUpdateSpinnerPrefix(throttling?: BingChatResponseThrottling) {
   if (throttling) {
     return chalk.bold(
       `Bing(${throttling.numUserMessagesInConversation}/${throttling.maxNumUserMessagesInConversation}): `
@@ -18,8 +18,8 @@ function createOrUpdateSpinnerPrefix(throttling?: EdgeGPTResponseThrottling) {
   return chalk.bold("Bing: ");
 }
 
-export const run = async (options: Partial<EdgeGPTConfig>) => {
-  const config = await loadEdgeGPTConfig({
+export const run = async (options: Partial<BingChatConfig>) => {
+  const config = await loadBingChatConfig({
     cookies: options.cookies,
     stream: options.stream,
     requestOptions: options.requestOptions,

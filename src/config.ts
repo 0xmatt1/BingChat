@@ -2,25 +2,25 @@ import { loadConfig } from "c12";
 import { readFileSync } from "fs";
 import { resolve } from "path";
 import { defaultRequestOptions } from "./request";
-import { EdgeGPTConfig, ResolvedEdgeGPTConfig } from "./types";
+import { BingChatConfig, ResolvedBingChatConfig } from "./types";
 import { logger } from "./utils";
 
-const configDefaults: EdgeGPTConfig = {
+const configDefaults: BingChatConfig = {
   cookies: "cookie.json",
   stream: true,
   requestOptions: defaultRequestOptions,
 };
 
-export const loadEdgeGPTConfig = async (
-  overrides?: Partial<EdgeGPTConfig>,
+export const loadBingChatConfig = async (
+  overrides?: Partial<BingChatConfig>,
   cwd = process.cwd()
 ) => {
-  const { config } = await loadConfig<EdgeGPTConfig>({
-    name: "edgegpt",
+  const { config } = await loadConfig<BingChatConfig>({
+    name: "bingchat",
     defaults: configDefaults,
     globalRc: true,
     overrides: {
-      ...(overrides as EdgeGPTConfig),
+      ...(overrides as BingChatConfig),
     },
     cwd,
   });
@@ -39,5 +39,5 @@ export const loadEdgeGPTConfig = async (
     return JSON.parse(f);
   });
   config.requestOptions = config.requestOptions.filter((v) => v);
-  return config as unknown as ResolvedEdgeGPTConfig;
+  return config as unknown as ResolvedBingChatConfig;
 };

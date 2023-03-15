@@ -1,12 +1,12 @@
 import _ from "lodash";
 import { ChatHub } from "./ChatHub";
 import { createConversation } from "./conversation";
-import { ResolvedEdgeGPTConfig } from "./types";
+import { ResolvedBingChatConfig } from "./types";
 
 export class ChatBot {
   chatHub?: ChatHub;
   wrote: number = 0;
-  constructor(public config: ResolvedEdgeGPTConfig) {}
+  constructor(public config: ResolvedBingChatConfig) {}
 
   async create() {
     const cookie = _.sample(this.config.cookies);

@@ -18,7 +18,7 @@ _新必应的聊天功能的逆向工程_
 ## 快速开始
 
 ```shell
-npx edgegpt
+npx bingchat
 ```
 
 ## 命令行用法
@@ -26,8 +26,8 @@ npx edgegpt
 ## CLI Usage
 
 ```shell
-npx edgegpt -h
-Usage: edgegpt [options]
+npx bingchat -h
+Usage: bingchat [options]
 
         !reset Reset the conversation
         !exit Exit the program
@@ -40,9 +40,9 @@ Options:
   -v, --version      Show version number                                                                    [boolean]
       --options      Request options  [array] [default: deepleo,enable_debug_commands,disable_emoji_spoken_text,enablemm]
 Examples:
-  edgegpt -f cookie.json
+  bingchat -f cookie.json
 
-Repo: https://github.com/kejunmao/edgegpt
+Repo: https://github.com/kejunmao/bingchat
 By: KeJun
 License: MIT
 ```
@@ -56,8 +56,8 @@ License: MIT
 ## 模块用法
 
 ```ts
-import { ChatBot, loadEdgeGPTConfig } from "edgegpt";
-const config = await loadEdgeGPTConfig();
+import { ChatBot, loadBingChatConfig } from "bingchat";
+const config = await loadBingChatConfig();
 
 const chatBot = new ChatBot(config);
 await chatBot.create();
@@ -67,7 +67,7 @@ console.log(await chatBot.askAsync("hello!"));
 
 ## 配置
 
-配置项使用 [unjs/c12](https://github.com/unjs/c12) 自动从 cwd 中加载。 你可以使用 `edgegpt.config.json`, `edgegpt.config.{ts,js,mjs,cjs}` 或者 `.edgegptrc`.
+配置项使用 [unjs/c12](https://github.com/unjs/c12) 自动从 cwd 中加载。 你可以使用 `bingchat.config.json`, `bingchat.config.{ts,js,mjs,cjs}` 或者 `.BingChatrc`.
 
 有关可用选项和默认值，请参见 [./src/config.ts](./src/config.ts)
 
@@ -79,11 +79,11 @@ console.log(await chatBot.askAsync("hello!"));
 
 ## 致谢
 
-- [EdgeGPT](https://github.com/acheong08/EdgeGPT/)
+- [bingchat](https://github.com/acheong08/bingchat/)
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/edgegpt?style=flat-square
-[npm-version-href]: https://npmjs.com/package/edgegpt
+[npm-version-src]: https://img.shields.io/npm/v/bingchat?style=flat-square
+[npm-version-href]: https://npmjs.com/package/bingchat
 [bing-href]: https://www.bing.com/search?q=Bing+AI&showconv=1
 [node-href]: https://nodejs.org

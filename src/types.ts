@@ -23,13 +23,13 @@ export interface IRequestOptions {
 
 export type RequestOptions = (keyof IRequestOptions)[];
 
-export interface EdgeGPTConfig {
+export interface BingChatConfig {
   cookies: Path | Path[];
   stream: boolean;
   requestOptions: RequestOptions;
 }
 
-export interface ResolvedEdgeGPTConfig {
+export interface ResolvedBingChatConfig {
   cookies: Cookie[];
   stream: boolean;
   requestOptions: RequestOptions;
@@ -45,14 +45,14 @@ export interface Conversation {
   headers?: any;
 }
 
-export interface EdgeGPTResponse {
+export interface BingChatResponse {
   type: number;
   item: Record<string, any>;
   arguments: Record<string, any>[];
   [x: string]: any;
 }
 
-export interface EdgeGPTResponseThrottling {
+export interface BingChatResponseThrottling {
   maxNumUserMessagesInConversation: number;
   numUserMessagesInConversation: number;
 }

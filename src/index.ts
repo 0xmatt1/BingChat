@@ -1,4 +1,4 @@
-import { EdgeGPTConfig } from "./types";
+import { BingChatConfig } from "./types";
 
 export * from "./ChatBot";
 export * from "./ChatHub";
@@ -8,4 +8,4 @@ export * from "./request";
 export * from "./types";
 export * from "./utils";
 
-export const defineConfig = (config: Partial<EdgeGPTConfig>) => config;
+export const defineConfig = (config: Partial<BingChatConfig>) => config;

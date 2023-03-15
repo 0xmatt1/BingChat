@@ -2,15 +2,15 @@ import EventEmitter from "events";
 import { WebSocket } from "ws";
 import { DELIMITER } from "./constant";
 import { createRequest } from "./request";
-import { Conversation, EdgeGPTResponse, RequestOptions } from "./types";
+import { Conversation, BingChatResponse, RequestOptions } from "./types";
 import { appendIdentifier, createWSHeaders } from "./utils";
 import TypedEmitter from "typed-emitter";
 
 type ChatHubEvents = {
   open: (ws: WebSocket) => void;
   message: (message: string) => void;
-  response: (response: EdgeGPTResponse) => void;
-  final: (response: EdgeGPTResponse) => void;
+  response: (response: BingChatResponse) => void;
+  final: (response: BingChatResponse) => void;
   close: (code: number, reason: Buffer) => void;
   error: (error: Error) => void;
 };
@@ -58,7 +58,7 @@ export class ChatHub extends (EventEmitter as new () => TypedEmitter<ChatHubEven
           if (!obj) {
             continue;
           }
-          const response = JSON.parse(obj) as EdgeGPTResponse;
+          const response = JSON.parse(obj) as BingChatResponse;
           if (response["type"] === 1) {
             if (response["arguments"][0]["messages"]) {
               const text: string =
