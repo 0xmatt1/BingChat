@@ -82,7 +82,7 @@ console.log(await chatBot.askAsync("hello!"));
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/bingchat?style=flat-square
-[npm-version-href]: https://npmjs.com/package/bingchat
+[npm-version-src]: https://img.shields.io/npm/v/bingchat-cli?style=flat-square
+[npm-version-href]: https://npmjs.com/package/bingchat-cli
 [bing-href]: https://www.bing.com/search?q=Bing+AI&showconv=1
 [node-href]: https://nodejs.org
