@@ -42,9 +42,11 @@
     "prepublishOnly": "pnpm build",
     "release": "bumpp",
     "start": "esno src/index.ts",
+    "cli": "esno src/cli.ts",
     "test": "vitest"
   },
   "devDependencies": {
+    "@types/follow-redirects": "^1.14.1"
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.13.0",
     "@types/prompts": "^2.4.2",
@@ -63,6 +65,7 @@
     "c12": "^1.1.2",
     "chalk": "^5.2.0",
     "consola": "^2.15.3",
+    "follow-redirects": "^1.15.2",
     "lodash": "^4.17.21",
     "marked": "^4.2.12",
     "marked-terminal": "^5.1.1",
