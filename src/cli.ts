@@ -8,7 +8,7 @@ import { logger } from "./utils";
 
 (async () => {
   const args = await yargs(hideBin(process.argv))
-    .scriptName("bingchat")
+    .scriptName("bingchat-cli")
     .usage(
       `Usage: $0 [options]
 
@@ -33,7 +33,7 @@ import { logger } from "./utils";
     .alias("v", "version")
     .help()
     .epilog(
-      `Repo: https://github.com/kejunmao/bingchat\nBy: KeJun\nLicense: MIT`
+      `Repo: https://github.com/vincenthou/BingChatBy: https://github.com/KeJunMao/edgegpt\nLicense: MIT`
     ).argv;
 
   run({

@@ -1,5 +1,5 @@
 {
-  "name": "bingchat",
+  "name": "bingchat-cli",
   "type": "module",
   "version": "0.0.1",
   "packageManager": "pnpm@7.27.0",

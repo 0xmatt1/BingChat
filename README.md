@@ -3,9 +3,7 @@
 [![Bing](./assets/bing.svg)][bing-href]
 [![Bing](./assets/node.svg)][node-href]
 
-# Edge GPT
-
-![](./assets/demo.gif)
+# Bing Chat CLI
 
 _The reverse engineering the chat feature of the new version of Bing_
 
@@ -18,14 +16,14 @@ English | [简体中文](./README.zh-CN.md)
 ## Quick Start
 
 ```shell
-npx bingchat
+npx bingchat-cli
 ```
 
 ## CLI Usage
 
 ```shell
-npx bingchat -h
-Usage: bingchat [options]
+npx bingchat-cli -h
+Usage: bingchat-cli [options]
 
         !reset Reset the conversation
         !exit Exit the program
@@ -38,10 +36,10 @@ Options:
   -v, --version      Show version number                                                                    [boolean]
       --options      Request options  [array] [default: deepleo,enable_debug_commands,disable_emoji_spoken_text,enablemm]
 Examples:
-  bingchat -f cookie.json
+  bingchat-cli -f cookie.json
 
-Repo: https://github.com/kejunmao/bingchat
-By: KeJun
+Repo: https://github.com/vincenthou/BingChat
+By: https://github.com/KeJunMao/edgegpt
 License: MIT
 ```
 
@@ -82,10 +80,10 @@ Made with 💛
 
 Published under [MIT License](./LICENSE).
 
-## Acknowledgement and Thanks
+## Acknowledgement
 
-- [bingchat](https://github.com/acheong08/bingchat/)
-- [bingchat](https://github.com/KeJunMao/bingchat)
+- [EdgeGPT](https://github.com/acheong08/EdgeGPT)
+- [edgegpt](https://github.com/KeJunMao/edgegpt)
 
 <!-- Badges -->
 

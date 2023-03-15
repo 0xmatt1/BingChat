@@ -6,7 +6,7 @@ import { Cookie } from "./types";
 
 export const logger = consola.create({
   defaults: {
-    tag: "bingchat",
+    tag: "bingchat-cli",
   },
 });
 

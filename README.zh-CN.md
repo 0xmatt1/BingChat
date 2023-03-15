@@ -3,9 +3,7 @@
 [![Bing](./assets/bing.svg)][bing-href]
 [![Bing](./assets/node.svg)][node-href]
 
-# Edge GPT
-
-![](./assets/demo.gif)
+# Bing Chat 命令行工具
 
 _新必应的聊天功能的逆向工程_
 
@@ -18,7 +16,7 @@ _新必应的聊天功能的逆向工程_
 ## 快速开始
 
 ```shell
-npx bingchat
+npx bingchat-cli
 ```
 
 ## 命令行用法
@@ -26,8 +24,8 @@ npx bingchat
 ## CLI Usage
 
 ```shell
-npx bingchat -h
-Usage: bingchat [options]
+npx bingchat-cli -h
+Usage: bingchat-cli [options]
 
         !reset Reset the conversation
         !exit Exit the program
@@ -40,10 +38,10 @@ Options:
   -v, --version      Show version number                                                                    [boolean]
       --options      Request options  [array] [default: deepleo,enable_debug_commands,disable_emoji_spoken_text,enablemm]
 Examples:
-  bingchat -f cookie.json
+  bingchat-cli -f cookie.json
 
-Repo: https://github.com/kejunmao/bingchat
-By: KeJun
+Repo: https://github.com/vincenthou/BingChat
+By: https://github.com/KeJunMao/edgegpt
 License: MIT
 ```
 
@@ -79,7 +77,8 @@ console.log(await chatBot.askAsync("hello!"));
 
 ## 致谢
 
-- [bingchat](https://github.com/acheong08/bingchat/)
+- [EdgeGPT](https://github.com/acheong08/EdgeGPT)
+- [edgegpt](https://github.com/KeJunMao/edgegpt)
 
 <!-- Badges -->
 
