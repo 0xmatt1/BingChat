@@ -82,9 +82,10 @@ Made with 💛
 
 Published under [MIT License](./LICENSE).
 
-## Acknowledgement
+## Acknowledgement and Thanks
 
 - [EdgeGPT](https://github.com/acheong08/EdgeGPT/)
+- [edgegpt](https://github.com/KeJunMao/edgegpt)
 
 <!-- Badges -->
 
